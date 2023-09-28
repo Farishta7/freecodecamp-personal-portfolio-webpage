@@ -1,20 +1,65 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
+/* || GENERAL STYLES */
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    color: whitesmoke;    
+    color: whitesmoke;
 }
+
+li {
+    list-style-type: none;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    background-color: rgb(21, 60, 60);
+    border-top: 6px solid rgb(38, 92, 92);
+    padding: 3rem;
+    text-align: center;
+}
+
+/* || UTILITIES */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* || SITEWIDE */
 
 #navbar {
     background-color: rgb(49, 19, 77);
@@ -43,22 +88,15 @@ body {
 }
 
 .nav-list a:hover {
-  background: rgb(38, 92, 92);
+    background: rgb(38, 92, 92);
 }
 
-li {
-    list-style-type: none;
-    align-items: center;
-}
+/* SPECIFIC CSS: */
 
-a {
-    text-decoration: none;
-    color: whitesmoke
-    
-}
+/* ABOUT SECTION or WELCOME SECTION*/
 
 .about-section {
-    background-color: #000; 
+    background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #0a090a 100%);
     display: flex;
     flex-direction: column;
@@ -68,37 +106,10 @@ a {
     height: 100vh;
 }
 
-
-h1 {
-    font-size: 5rem;
-}
-
-h1, h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-
-.about-section > p {
+.about-section>p {
     font-style: italic;
     color: rgb(154, 34, 34);
     font-size: 3rem;
-
-}
-
-.projects-section {
-    background-color: rgb(38, 92, 92);
-    text-align: center;
-    padding: 10rem 2rem;
-}
-
-.code-edit-for-project-titles {
-    color: #10253a;
-    transition: color 0.3s ease-out;
-}
-
-.project-title:hover .code-edit-for-project-titles {
-  color: #ff7f50;
 }
 
 .code-edit-for-welcome-section {
@@ -107,105 +118,40 @@ h1, h2 {
 }
 
 h1:hover .code-edit-for-welcome-section {
-  color: rgb(154, 34, 34);
-    
+    color: rgb(154, 34, 34);
 }
- 
-@media only screen and (max-width: 550px) {
-    
-    h1 {
-        font-size: 3.3rem;
-    }
 
-    .about-section > p {
-    font-size: 1.5rem;
-    }
+/* PROJECTS SECTION */
 
-    #navbar {
-        display: block;  
-    }
+.projects-section {
+    background-color: rgb(38, 92, 92);
+    text-align: center;
+    padding: 10rem 2rem;
+}
 
-    .nav-list {
-        margin: 0px;
-    }
-
-    .projects-section h2  {
+.projects-section-header {
     margin: 0 auto 3rem auto;
-    border-bottom: 0.2rem solid #fcf8f8 ;
-    max-width: 350px;
-    font-size: 2.9rem;
-    padding-bottom: 8px;
-    }
-
-    .contact-section-header h2 {
-    font-size: 2.9rem;
- }
-
- .contact-link-icons .each-contact-icon {
-    font-size: 1.5rem;
-    
- }
-
- footer {
-    font-size: 1.5rem;
- }
-
- .contact-section {
-    height: 10vh;
- }
-    
- }
-
-
- @media only screen and (max-width: 360px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .nav-list a {
-        font-size: 1.5rem;
-    }
-
-    .projects-section h2  {
-    margin: 0 auto 3rem auto;
-    border-bottom: 0.2rem solid #fcf8f8 ;
-    max-width: 250px;
-    font-size: 2.1rem;
-    padding-bottom: 8px;
-    }
-
-    .contact-section-header h2 {
-    font-size: 2.1rem;
- }
-
- 
- }
- 
-
- .projects-section-header {
-    margin: 0 auto 3rem auto;
-    border-bottom: 0.2rem solid #fcf8f8 ;
+    border-bottom: 0.2rem solid #fcf8f8;
     max-width: 500px;
     font-size: 4.2rem;
     padding-bottom: 8px;
- }
+}
 
- .projects-grid {
+.projects-grid {
     display: grid;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
-  gap: 4rem;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 4rem;
     width: 100%;
     max-width: 1100px;
     padding: 0px;
     margin: 0px auto;
     margin-bottom: 6rem;
+}
 
- }
-
- img {
-  width: 100%;
-  object-fit: cover;
-  display: block;
+.project-tile {
+    background-color: #10253a;
+    border-radius: 5px;
+    padding: 6px;
 }
 
 .project-title {
@@ -213,12 +159,13 @@ h1:hover .code-edit-for-welcome-section {
     padding: 2rem 0.5rem;
 }
 
+.code-edit-for-project-titles {
+    color: #10253a;
+    transition: color 0.3s ease-out;
+}
 
-
-.project-tile {
-    background-color: #10253a;
-    border-radius: 5px;
-    padding: 6px;
+.project-title:hover .code-edit-for-project-titles {
+    color: #ff7f50;
 }
 
 .show-all-btn {
@@ -227,58 +174,13 @@ h1:hover .code-edit-for-welcome-section {
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 700px) {
-    .projects-grid {
-    display: grid;
-  grid-template-columns: repeat(1, minmax(320px, 1fr));
-  gap: 2rem;
-    width: 100%;
-    max-width: 350px;
-    padding: 0px;
-    margin: 0px auto;
-    margin-bottom: 6rem;
- }
-
- 
- }
-
- 
-
-
- @media only screen and (max-width: 400px) {
-    .projects-grid {
-    display: grid;
-  grid-template-columns: repeat(1, minmax(220px, 1fr));
-  gap: 2rem;
-    width: 100%;
-    max-width: 250px;
-    padding: 0px;
-    margin: 0px auto;
-    margin-bottom: 3rem;
- }
-
- .project-title {
-    font-size: 1.5rem;
-    padding: 1rem 0.5rem;
+.show-all-btn:hover {
+    color: #ff7f50;
 }
 
-.show-all-btn {
-    background-color: #10253a;
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-}
+/* CONTACT SECTION */
 
-.projects-section {
-    padding: 3.5rem 2rem;
-}
- }
-
-h2 {
-    font-size: 4.2rem;
- }
-
- .contact-section {
+.contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -287,43 +189,140 @@ h2 {
     background-color: rgb(21, 60, 60);
     width: 100%;
     height: 40vh;
- }
+}
 
- .contact-link-icons {
+.contact-link-icons {
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 800px;
     margin-top: 4rem;
     flex-wrap: wrap;
+}
 
- }
-
- .each-contact-icon {
+.each-contact-icon {
     font-size: 2rem;
     padding: 1rem;
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.3s ease-out;
- }
-
- .each-contact-icon:hover {
-  transform: translateY(8px);
-  color: #ff7f50;
 }
 
+.each-contact-icon:hover {
+    transform: translateY(8px);
+    color: #ff7f50;
+}
 
-
- .contact-link-icons i {
+.contact-link-icons i {
     padding: 0.5rem;
- }
+}
 
- footer {
-    background-color: rgb(21, 60, 60);
-    border-top: 6px solid rgb(38, 92, 92);
-    padding: 3rem;
-    text-align: center;
- }
+/* MEDIA QUERIES */
 
- .show-all-btn:hover {
-    color:#ff7f50;
- }
+@media only screen and (max-width: 550px) {
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    .about-section>p {
+        font-size: 1.5rem;
+    }
+
+    #navbar {
+        display: block;
+    }
+
+    .nav-list {
+        margin: 0px;
+    }
+
+    .projects-section h2 {
+        margin: 0 auto 3rem auto;
+        border-bottom: 0.2rem solid #fcf8f8;
+        max-width: 350px;
+        font-size: 2.9rem;
+        padding-bottom: 8px;
+    }
+
+    .contact-section-header h2 {
+        font-size: 2.9rem;
+    }
+
+    .contact-link-icons .each-contact-icon {
+        font-size: 1.5rem;
+
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    .contact-section {
+        height: 10vh;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-list a {
+        font-size: 1.5rem;
+    }
+
+    .projects-section h2 {
+        margin: 0 auto 3rem auto;
+        border-bottom: 0.2rem solid #fcf8f8;
+        max-width: 250px;
+        font-size: 2.1rem;
+        padding-bottom: 8px;
+    }
+
+    .contact-section-header h2 {
+        font-size: 2.1rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(320px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 350px;
+        padding: 0px;
+        margin: 0px auto;
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(220px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 250px;
+        padding: 0px;
+        margin: 0px auto;
+        margin-bottom: 3rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .show-all-btn {
+        background-color: #10253a;
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+    .projects-section {
+        padding: 3.5rem 2rem;
+    }
+}
