@@ -3,8 +3,10 @@
 /* || GENERAL STYLES */
 /* || UTILITIES */
 /* || SITEWIDE */
-/* SPECIFIC CSS: */
-/* MEDIA QUERIES */
+/* || SPECIFIC CSS: */
+/* || MEDIA QUERIES */
+
+/* --------------------------------------------------------- */
 
 /* --------------------------------------------------------- */
 
@@ -101,7 +103,7 @@ footer {
     background: rgb(38, 92, 92);
 }
 
-/* SPECIFIC CSS: */
+/* || SPECIFIC CSS: */
 
 /* ABOUT SECTION or WELCOME SECTION*/
 
@@ -226,7 +228,7 @@ h1:hover .code-edit-for-welcome-section {
     padding: 0.5rem;
 }
 
-/* MEDIA QUERIES */
+/* || MEDIA QUERIES */
 
 @media only screen and (max-width: 550px) {
     h1 {
@@ -291,8 +293,6 @@ h1:hover .code-edit-for-welcome-section {
     .contact-section-header h2 {
         font-size: 2.1rem;
     }
-
-
 }
 
 @media only screen and (max-width: 700px) {
